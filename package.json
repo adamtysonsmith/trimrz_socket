@@ -4,6 +4,7 @@
   "description": "socket server for trimrz api and native clients",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Adam Smith <adam@trimrz.com>",
