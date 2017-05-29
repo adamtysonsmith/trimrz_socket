@@ -1,0 +1,14 @@
+{
+  "name": "trimrz_socket",
+  "version": "1.0.0",
+  "description": "socket server for trimrz api and native clients",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adam Smith <adam@trimrz.com>",
+  "license": "SEE LICENSE IN LICENSE.TXT",
+  "dependencies": {
+    "socket.io": "^2.0.1"
+  }
+}
