@@ -10,6 +10,7 @@
   "author": "Adam Smith <adam@trimrz.com>",
   "license": "SEE LICENSE IN LICENSE.TXT",
   "dependencies": {
+    "express": "^4.15.3",
     "socket.io": "^2.0.1"
   }
 }
