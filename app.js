@@ -12,10 +12,12 @@ io.on('connection', client => {
   const hired = 'hired event';
   const applied = 'job response event';
   const job = 'new job event';
+  const userUpdated = 'user updated';
 
   client.on(hired, broadcastToClients(hired))
   client.on(applied, broadcastToClients(applied))
   client.on(job, broadcastToClients(job))
+  client.on(userUpdated, broadcastToClients(userUpdated))
 
   client.on('disconnect', () => console.log('INFO: Client disconnected', client.id))
 });
