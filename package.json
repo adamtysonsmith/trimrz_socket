@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy:production": "git push heroku-production master",
-    "deploy:development": "git push heroku-development master"
+    "deploy:development": "git push heroku-development development:master",
+    "deploy:production": "git push heroku-production master"
   },
   "author": "Adam Smith <adam@trimrz.com>",
   "license": "private",
