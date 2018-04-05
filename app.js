@@ -20,8 +20,8 @@ io.on('connection', client => {
   client.on(applied, broadcastToClients(applied))
   client.on(job, broadcastToClients(job))
   client.on(userUpdated, broadcastToClients(userUpdated))
-  client.on(userUpdated, broadcastToClients(checkInSyncBusiness))
-  client.on(userUpdated, broadcastToClients(checkInSyncWorker))
+  client.on(checkInSyncBusiness, broadcastToClients(checkInSyncBusiness))
+  client.on(checkInSyncWorker, broadcastToClients(checkInSyncWorker))
 
   client.on('disconnect', () => console.log('INFO: Client disconnected', client.id))
 });
