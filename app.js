@@ -13,15 +13,18 @@ io.on('connection', client => {
   const applied = 'job response event';
   const job = 'new job event';
   const userUpdated = 'user updated';
+  const checkInSyncBusiness = 'check-in sync business';
+  const checkInSyncWorker = 'check-in sync worker';
 
   client.on(hired, broadcastToClients(hired))
   client.on(applied, broadcastToClients(applied))
   client.on(job, broadcastToClients(job))
   client.on(userUpdated, broadcastToClients(userUpdated))
+  client.on(userUpdated, broadcastToClients(checkInSyncBusiness))
+  client.on(userUpdated, broadcastToClients(checkInSyncWorker))
 
   client.on('disconnect', () => console.log('INFO: Client disconnected', client.id))
 });
-
 
 function broadcastToClients(eventName) {
   return (data) => io.emit(eventName, data);
