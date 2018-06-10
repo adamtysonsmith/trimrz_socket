@@ -15,6 +15,7 @@ io.on('connection', client => {
   const userUpdated = 'user updated';
   const checkInSyncBusiness = 'check-in sync business';
   const checkInSyncWorker = 'check-in sync worker';
+  const updateWorkerAvailability = 'update worker availability';
 
   client.on(hired, broadcastToClients(hired))
   client.on(applied, broadcastToClients(applied))
@@ -22,6 +23,7 @@ io.on('connection', client => {
   client.on(userUpdated, broadcastToClients(userUpdated))
   client.on(checkInSyncBusiness, broadcastToClients(checkInSyncBusiness))
   client.on(checkInSyncWorker, broadcastToClients(checkInSyncWorker))
+  client.on(updateWorkerAvailability, broadcastToClients(updateWorkerAvailability))
 
   client.on('disconnect', () => console.log('INFO: Client disconnected', client.id))
 });
